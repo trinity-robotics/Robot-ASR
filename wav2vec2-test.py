@@ -104,7 +104,7 @@ model = AutoModelForCTC.from_pretrained(
 # Auto classes are functions that automatically retrieves desired model based on its name and path
 # In this case, it is looking for a model that is alse compatible with CTC loss
 
-'''
+
 
 #warmup steps used 
 
@@ -141,7 +141,7 @@ trainer = Trainer(
 )
 
 trainer.train()
-'''
+
 
 from datasets import load_dataset, Audio
 
