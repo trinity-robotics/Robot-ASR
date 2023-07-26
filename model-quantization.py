@@ -1,10 +1,12 @@
 from transformers import AutoModelForCTC, Wav2Vec2Processor
-import torch, torchaudio
+import torch, torchaudio, os
 
 # Replace the model identifier with the desired model
-model_path = "./runs/jul22"
+model_path = "./runs/wav2vec2-trained"
+
 model = AutoModelForCTC.from_pretrained(model_path)
 processor = Wav2Vec2Processor.from_pretrained(model_path)
+
 
 #   Changing file sampling rate
 
@@ -33,6 +35,16 @@ quantized_model = torch.quantization.quantize_dynamic(
     model, {torch.nn.Linear}, dtype=torch.qint8
 )
 
+
+# Saving the now quantized model
+
+save_directory = 'wav2vec2-quantized'
+parent_directory = './runs'
+
+quantized_model_path = os.path.join(parent_directory, save_directory)
+if os.path.exists(quantized_model_path) == False:
+    os.mkdir(quantized_model_path)
+
 traced_model = torch.jit.trace(quantized_model, input_tensor.unsqueeze(0), strict=False)
-torch.jit.save(traced_model, "wav2vec2_trace.pt")
+torch.jit.save(traced_model, "./runs/wav2vec2-quantized/wav2vec2_trace.pt")
 
