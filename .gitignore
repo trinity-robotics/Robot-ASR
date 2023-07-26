@@ -1,5 +1,4 @@
 venv/
 audio/
-runs/
-mnist_train
-/wav2vec2_finetuned_full
+/test-files
+/runs
