@@ -6,7 +6,9 @@ Robot-ASR or Robot Automatic Speech Recognition (ASR) uses pretrained Wav2Vec2 -
 
 ## What is it used for?
 
-The Robot-ASR model is intended to be deployed on Trinity Robotics' Storm robot in order to give operation commands - like "go left" for example, using audio input. However, this model is not limited to operations on Storm and can be deployed on any device that supports the necessary requirements. The model can also be quantized to reduce the file size and better suit operations on edge or mobile devices with limited storage space.
+The Robot-ASR model is intended to be deployed on Trinity Robotics' Storm robot in order to give operation commands - like "go forward", using audio input. The predicted command can then be passed into the robot's logic node which can then perform appropriate actions to respond to the user's commands - such as setting motor speeds to move robot forward. 
+
+However, this model is not limited to operations on Storm and can be deployed on any device that supports the necessary requirements. The model can also be quantized to reduce the file size and better suit operations on edge or mobile devices with limited storage space.
 
 ## Performance
 
@@ -24,7 +26,7 @@ The large discrepancy in inference time between the quantized and unqauntized Ro
   * Post-training quantization was chosen as quantization aware training can be tricky and time consuming to figure out
   * Dynamic quantization was also chosen over Static due to its reletively easier implementation
 
-Thus, for future model quantization, we will attempt to implement post-training static quantization to help decrease the model's inference times, as well as improve memory usage efficiency
+Thus, for future model quantization, we will attempt to implement post-training static quantization to help decrease the model's inference times, as well as improve memory usage efficiency.
 
 ## Resources and References
 https://www.trinityrobotics.ca
