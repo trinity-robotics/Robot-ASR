@@ -1,4 +1,4 @@
-# Automatic Speech Recognition using Wav2vec2
+# Robot Automatic Speech Recognition using Wav2vec2
 
 ## What is this?
 
@@ -6,9 +6,15 @@ This Automatic Speech Recognition (ASR) model uses pretrained Wav2Vec2 - a Deep 
 
 ## What is it used for?
 
-This ASR model is intended to be deployed on Trinity Robotics' Storm robot in order to give operation commands - like "go left" for example, using audio input. However, this model is not limited to operations on Storm and can be deployed on any device that supports the necessary requirements. The model can also be quantized to reduce the file size to better suit operations on edge or mobile devices.
+The Robot ASR model is intended to be deployed on Trinity Robotics' Storm robot in order to give operation commands - like "go left" for example, using audio input. However, this model is not limited to operations on Storm and can be deployed on any device that supports the necessary requirements. The model can also be quantized to reduce the file size and better suit operations on edge or mobile devices with limited storage space.
 
 ## Performance
+
+When evaluating the performance of this ASR model, the Robot ASR base and quantized variations were tested against the non-finetuned Wav2Vec2 base model. All three models were evaluated using a Timit test set of 1680 audio samples with Word Error Rate (WER) being used evaluate each model's accuracy. 
+
+Attempt | #1 | #2 | #3 | #4 | #5 | #6 | #7 | #8 | #9 | #10 | #11
+--- | --- | --- | --- |--- |--- |--- |--- |--- |--- |--- |---
+Seconds | 301 | 283 | 290 | 286 | 289 | 285 | 287 | 287 | 272 | 276 | 269
 
 ## Resources and References
 https://www.trinityrobotics.ca
