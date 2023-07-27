@@ -22,7 +22,7 @@ Models | WER | Avg Memory Usage, Gb | Inference Time (per file), s |
 --- | --- | --- | --- | 
 Robot-ASR | 0.277 | 7.48 | 0.62 | 
 Robot-ASR Quantized| 0.275 | 7.31 | 1.61 | 
-Wav2Vec2-base| 0.360 | 6.68 | 35 | 
+Wav2Vec2-base| 0.360 | 8.42 | 0.63 | 
 
 The evaluation results show that although both variations of Robot-ASR have higher speech inference accurracy compared to the base Wav2Vec2 model, both models also have slower inference speeds. Furthermore, the quantized model seems to have ... which is extremely undesirable for realtime applications like deploying on Trinity Storm. 
 
