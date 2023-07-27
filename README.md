@@ -20,7 +20,7 @@ When evaluating the performance of this ASR model, the Robot ASR base and quanti
 
 Models | WER | Avg Memory Usage, Gb | Inference Time (per file), s | 
 --- | --- | --- | --- | 
-Robot-ASR | 0.277 | 5.38 | 48 | 
+Robot-ASR | 0.277 | 5.38 | 0.62 | 
 Robot-ASR Quantized| 0.275 | 7.31 | 1.61 | 
 Wav2Vec2-base| 0.360 | 6.68 | 35 | 
 
