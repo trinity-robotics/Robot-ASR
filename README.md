@@ -1,5 +1,7 @@
 # Robot-ASR using Wav2vec2
 
+![alt text](https://github.com/brucew5978-git/Robot-ASR/blob/main/images/Storm_Iteration_2_-_Assembly.png)
+
 ## What is Robot-ASR?
 
 Robot-ASR or Robot Automatic Speech Recognition (ASR) uses pretrained Wav2Vec2 - a Deep Learning Audio model introduced by Facebook AI Research, which is further finetuned on Timit - an acoustic speech dataset, in order to increase the ASR's effectiveness in speech recognition 
