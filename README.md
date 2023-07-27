@@ -13,4 +13,5 @@ This ASR model is intended to be deployed on Trinity Robotics' Storm robot in or
 ## Resources and References
 https://www.trinityrobotics.ca
 https://colab.research.google.com/github/patrickvonplaten/notebooks/blob/master/Fine_tuning_Wav2Vec2_for_English_ASR.ipynb#scrollTo=Adm0LngNNxq7
+
 https://arxiv.org/pdf/2006.11477.pdf
