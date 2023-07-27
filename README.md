@@ -6,6 +6,8 @@ Robot-ASR or Robot Automatic Speech Recognition (ASR) uses pretrained Wav2Vec2 -
 
 ## What is it used for?
 
+![alt text](https://github.com/brucew5978-git/wav2vec2-ASR/blob/main/images/audio-to-command.jpeg)
+
 The Robot-ASR model is intended to be deployed on Trinity Robotics' Storm robot in order to give operation commands - like "go forward", using audio input. The predicted command can then be passed into the robot's logic node which can then perform appropriate actions to respond to the user's commands - such as setting motor speeds to move robot forward. 
 
 However, this model is not limited to operations on Storm and can be deployed on any device that supports the necessary requirements. The model can also be quantized to reduce the file size and better suit operations on edge or mobile devices with limited storage space.
