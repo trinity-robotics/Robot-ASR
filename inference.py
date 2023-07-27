@@ -7,10 +7,11 @@ model_path = "./runs/wav2vec2-full"
 model = AutoModelForCTC.from_pretrained(model_path)
 processor = Wav2Vec2Processor.from_pretrained(model_path)
 
+audio_file_path = "./audio/input.wav"
 
 # verify if sample rate of model corresponds to wav file sample rate
 target_sample_rate = processor.feature_extractor.sampling_rate
-waveform, file_sample_rate = torchaudio.load("./audio/input.wav", normalize=True) 
+waveform, file_sample_rate = torchaudio.load(audio_file_path, normalize=True) 
 
 if file_sample_rate!= target_sample_rate:
     resampler= torchaudio.transforms.Resample(file_sample_rate, target_sample_rate)
@@ -36,4 +37,5 @@ input_tensor = input["input_values"].squeeze()
 
 
 predicted_text = map_to_result(input_tensor, model)
-print(predicted_text)
+print("audio file path: ", audio_file_path)
+print("predicted command: ", predicted_text)
