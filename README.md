@@ -28,7 +28,7 @@ The evaluation results show that although both variations of Robot-ASR have high
 
 The large discrepancy in inference time between the quantized and unqauntized Robot-ASR models is likely due to the memory overhead caused by on the fly conversions utilized in dynamic quantization. Post-training Dynamic Quantization was used in this project for the following reasons: 
   * Post-training quantization was chosen as quantization aware training can be tricky and time consuming to figure out
-  * Dynamic quantization was also chosen over Static due to its reletively easier implementation
+  * Dynamic quantization was also chosen over Static due to its relatively easier implementation
 
 Thus, for future model quantization, we will attempt to implement post-training static quantization to help decrease the model's inference times, as well as improve memory usage efficiency.
 
