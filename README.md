@@ -13,9 +13,9 @@ The Robot-ASR model is intended to be deployed on Trinity Robotics' Storm robot 
 When evaluating the performance of this ASR model, the Robot ASR base and quantized variations were tested against the non-finetuned Wav2Vec2 base model. All three models were evaluated using a Timit test set of 1680 audio samples with Word Error Rate (WER) being used evaluate each model's accuracy. 
 
 Models | WER | Avg Memory Usage, Gb | Inference Time, s | 
---- | --- | --- | --- | --- |
+--- | --- | --- | --- | 
 Robot-ASR | 0.277 | 5.38 | 48 | 
---- | --- | --- | --- | --- |
+--- | --- | --- | --- | 
 Wav2Vec2-base| 0.360 | 6.68 | 35 | 
 
 ## Resources and References
