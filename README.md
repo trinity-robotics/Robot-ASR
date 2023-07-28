@@ -48,3 +48,5 @@ https://colab.research.google.com/github/patrickvonplaten/notebooks/blob/master/
 https://arxiv.org/pdf/2006.11477.pdf
 
 https://huggingface.co/docs/optimum/concept_guides/quantization
+
+https://pytorch.org/audio/stable/tutorials/speech_recognition_pipeline_tutorial.html
