@@ -2,11 +2,19 @@
 
 ![alt text](https://github.com/brucew5978-git/Robot-ASR/blob/main/images/Storm_Iteration_2_-_Assembly.png)
 
-## What is Robot-ASR?
+# What is Robot-ASR?
 
 Robot-ASR or Robot Automatic Speech Recognition (ASR) uses pretrained Wav2Vec2 - a Deep Learning Audio model introduced by Facebook AI Research, which is further finetuned on Timit - an acoustic speech dataset, in order to increase the ASR's effectiveness in speech recognition 
 
-## What is it used for?
+## Setup
+ * To download the finetuned wav2vec2 model, run setup.py
+ * Record audio commands using audio-recording.py
+ * Run live inference on audio files using inference.py
+
+ * For quantization use model-quantization.py
+
+
+# What is it used for?
 
 ![alt text](https://github.com/brucew5978-git/wav2vec2-ASR/blob/main/images/audio-to-command.jpeg)
 
@@ -14,7 +22,7 @@ The Robot-ASR model is intended to be deployed on Trinity Robotics' Storm robot 
 
 However, this model is not limited to operations on Storm and can be deployed on any device that supports the necessary requirements. The model can also be quantized to reduce the file size and better suit operations on edge or mobile devices with limited storage space.
 
-## Performance
+# Performance
 
 When evaluating the performance of this ASR model, the Robot ASR base and quantized variations were tested against the non-finetuned Wav2Vec2 base model. All three models were evaluated using a Timit test set of 1680 audio samples with Word Error Rate (WER) being used evaluate each model's accuracy. 
 
